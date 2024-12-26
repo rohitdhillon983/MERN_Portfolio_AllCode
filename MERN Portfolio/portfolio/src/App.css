@@ -1,0 +1,336 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Piazzolla:ital,opsz,wght@0,8..30,100..900;1,8..30,100..900&family=Playwrite+HR+Lijeva:wght@100..400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Piazzolla:ital,opsz,wght@0,8..30,100..900;1,8..30,100..900&family=Playwrite+HR+Lijeva:wght@100..400&display=swap');
+
+
+.dancing_text {
+  font-family: "Dancing Script", cursive;
+}
+::-webkit-scrollbar {
+  width: 15px;
+}
+::-webkit-scrollbar-track {
+  background: #d1e5ff;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#642bff, #ff22e6);
+  border-radius: 7px;
+}
+.text-tubeLight-effect {
+  display: flex;
+  color: #fff;
+  position: relative;
+  text-transform: uppercase;
+  width: 100%;
+  outline: none;
+  overflow-y: hidden;
+  /* -webkit-box-reflect: below -27px linear-gradient(transparent, #ffffff40); */
+  animation: animate 5s linear infinite;
+}
+@keyframes animate {
+  0%,
+  18%,
+  20% {
+    color: #f115f8;
+  }
+  50.1%,
+  60%,
+  65.1%{
+    color: #157ff8;
+  }
+  80%,
+  90.1%,
+  92% {
+    color: rgb(235, 8, 8);
+    text-shadow: none;
+  }
+  18.1%,
+  20.1%,
+  30%,
+  50%,
+  60.1%,
+  65%,
+  80.1%{
+    color: #17810f;
+  }
+  90.1%,
+  92.1%,
+  100% {
+    color: #fff;
+    text-shadow: 0 0 1px rgb(150, 150, 150), 0 0 2px rgb(150, 150, 150),
+      0 0 2px rgb(150, 150, 150), 0 0 5px rgb(150, 150, 150),
+      0 0 20px rgb(150, 150, 150);
+  }
+}
+
+.custom-shape-divider-bottom-1733254774 {
+  position: absolute;
+  bottom: -269px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+  background-color:#bec5ca;
+  z-index:20;
+}
+
+.custom-shape-divider-bottom-1733254774 svg {
+  position: relative;
+  display: block;
+  width: calc(106% + 1.3px);
+  height: 342px;
+}
+
+.custom-shape-divider-bottom-1733254774 .shape-fill {
+  fill: #ffffff; 
+}
+
+@media screen and (min-width:640px) {
+  .custom-shape-divider-bottom-1733254774{
+    bottom: -341px;
+  }
+  
+}
+@media screen and (max-width:640px) {
+  .custom-shape-divider-bottom-1733254774{
+    bottom: -341px;
+  }
+  .Herosection_Main{
+    min-height: 300px;
+  }
+  .heroSection{
+    width: 100%;
+    display: block;
+  }
+  /* timeline  */
+  .TimelineBgBox{
+    height: 100%;
+  }
+
+  /* skills */
+  .Skills_Title{
+    top: 10px;
+  }
+  .skillsBottomImg{
+    bottom: -100px;
+  }
+
+  /* project section */
+  #Project{
+    top: 100px;
+  }
+  .Project_Title1{
+    font-size: 40px;
+  }
+  .Project_icon{
+    font-size: 80px;
+  }
+  .ProjectEvenNo{
+    right: -30px;
+    top: 0;
+  }
+  .PorjectOddNo{
+    top: 0;
+    left: -30px;
+  }
+  .projectContainer{
+    display: block;
+  }
+  .projectContainer1{
+    background: #d5edd9;
+    border-radius: 40px;
+    margin-bottom: 30px;
+  }
+  .projectContainer2{
+    background: #c4d8f4;
+    border-radius: 40px;
+    margin-bottom: 30px;
+  }
+  .projectContainer .ProjectContent, .ProjectContent2_1,.ProjectContent2_2,.ProjectContent2{
+    width: 100%;
+    border: none;
+  }
+
+  .Software_Main{
+    top: 100px;
+  }
+
+  #ContactUs{
+    top: 100px;
+  }
+  .Contact_Main{
+    display: block;
+    overflow: hidden;
+  }
+  .Contact_Main .Contact_content1{
+    width: 100%;
+    padding: 0 30px;
+  }
+  .Contact_Main .opacity{
+    top: 0;
+    height: 30%;
+    width: 30%;
+  }
+  .ContactUsImg{
+    top: 100px;
+  }
+  .footerMain{
+    top: 150px;
+  }
+
+}
+@media screen and (max-width:480px) {
+  .custom-shape-divider-bottom-1733254774{
+    bottom: -341px;
+  }
+  
+}
+
+.borderRadius{
+  border-radius: 30% 70% 70% 30% / 21% 48% 52% 79% ;
+}
+.boxShadow{
+  box-shadow: 0 0 10px #00000097,
+  inset 0 0 10px #cffff1,
+  inset 0 0 30px #defef5,
+  inset 0 0 50px #d7fdf0
+}
+
+.fontStyle{
+  font-family: "Playwrite HR Lijeva", cursive;
+}
+.fontStyle2{
+  font-family: "Playwrite HR Lijeva", serif;
+  font-weight: 500;
+}
+
+/* skills  */
+.custom-shape-divider-top-1733274787 {
+  position: absolute;
+  top: -104px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  background-color: #88a6cbf6;
+}
+
+.custom-shape-divider-top-1733274787 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 104px;
+}
+
+.custom-shape-divider-top-1733274787 .shape-fill {
+  fill: #ffffff;
+}
+/* 3 */
+.custom-shape-divider-top-1733275521 {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+.custom-shape-divider-top-1733275521 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 108px;
+}
+.custom-shape-divider-top-1733275521 .shape-fill {
+  fill: #dae5f5;
+}
+.custom-shape-divider-bottom-1733277080 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+  /* background-color: black; */
+}
+
+.custom-shape-divider-bottom-1733277080 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 97px;
+}
+
+.custom-shape-divider-bottom-1733277080 .shape-fill {
+  fill: #003fa554;
+}
+.custom-shape-divider-bottom-1733277081 {
+  position: absolute;
+  top: -0.8px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  z-index: 10;
+  transform: rotate(180deg);
+  background-color: #5e87bf;
+
+}
+
+.custom-shape-divider-bottom-1733277081 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 100px;
+}
+
+.custom-shape-divider-bottom-1733277081 .shape-fill {
+  fill: #abbfe0;
+  /* opacity: 0; */
+}
+
+
+  /* projects  */
+
+  .IBefore::before{
+    position: absolute;
+    content: '';
+    width: 400px;
+    height:300px;
+    z-index: -100;
+    background: rgba(248, 209, 243, 0.634);
+    border-radius: 61% 39% 52% 48% / 30% 41% 59% 70% ;
+  }
+  .spanBef::before{
+    position: absolute;
+  }
+
+  /* contactus */
+  .ContactUsImg::before{
+    position: absolute;
+    content: '';
+    top: 20px;
+    left: 20px;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background-image: url("./assets/frame.png");
+  }
+
+  /* home page animation */
+  .opacity{
+    animation: animate1 5s linear infinite;
+  }
+  @keyframes animate1{
+    10%,60%,100%{
+      opacity: 0;
+    }
+    40%,80%{
+      opacity: 1;
+    }
+  }
+  
+  .Software_Main{
+    background-image: url(./assets/apps.png);
+  }
