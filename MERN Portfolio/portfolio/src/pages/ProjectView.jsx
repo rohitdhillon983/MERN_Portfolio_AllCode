@@ -19,11 +19,11 @@ export const ProjectView = () => {
   useEffect(() => {
     const getProject = async () => {
       await axios
-        .get(`https://mern-portfolio-backend-3.onrender.com/api/v1/project/getSingleProject/675033901509db549b4e8c3c`, {
+        .get(`https://mern-portfolio-backend-3.onrender.com/api/v1/project/getSingleProject/${id}`, {
           withCredentials: true,
         })
         .then((res) => {
-            // console.log(res)
+            console.log(res)
           setTitle(res.data.deleteProject.title);
           setDescription(res.data.deleteProject.description);
           setStack(res.data.deleteProject.stack);
@@ -96,11 +96,11 @@ export const ProjectView = () => {
                   </ul>
                 </div>
                 <div className="w-full sm:col-span-4">
-                  <p className="text-2xl mb-2">Stack:</p>
+                  {/* <p className="text-2xl mb-2">Stack:</p> */}
                   <p>{stack}</p>
                 </div>
                 <div className="w-full sm:col-span-4">
-                  <p className="text-2xl mb-2">Deployed:</p>
+                  {/* <p className="text-2xl mb-2">Deployed:</p> */}
                   <p>{deployed}</p>
                 </div>
                 <div className="w-full sm:col-span-4">

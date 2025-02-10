@@ -127,7 +127,7 @@ export  const Hero = () => {
         <li>N</li></div>
         </h1>
         <h1 className="text-tubeLight-effect overflow-x-hidden text-[1.3rem] 
-        sm:text-[1.75rem] md:text-[2.2rem] lg:text-[2.8rem] tracking-[15px]">
+        sm:text-[1.75rem] md:text-[2.2rem] lg:text-[2.8rem] tracking-[5px]">
           <Typewriter
             words={["DEVELOPER", "YOUTUBER", "CYBER SECURITY","BUG BOUNTY","UI/UX DESIGNER"]}
             loop={500}
@@ -145,7 +145,7 @@ export  const Hero = () => {
           <Link to={"https://www.instagram.com/__rohit__dhillon__/"} className="z-50">
            <li> <BsInstagram className="text-pink-500 w-7 h-7" /></li>
           </Link>
-          <Link to={user.facebookURL} target="_blank">
+          <Link to={user.facebookURL} className="z-50">
             <li><FiFacebook className="text-blue-800 w-7 h-7" /></li>
           </Link>
           <Link to={"https://in.linkedin.com/in/rohit-dhillon-bug20421"}className="z-50">
@@ -164,14 +164,14 @@ export  const Hero = () => {
               <span>Github</span>
             </Button>
          </li> </Link>
-         <Link to={resume} download={resume.pdf} className="z-50">
+         <a href={resume} download={resume.pdf} className="z-50">
             <li><Button className="rounded-[30px] flex items-center gap-2 flex-row z-50">
               <span>
               <MdFileDownload />
               </span>
               <span>Resume</span>
             </Button>
-         </li> </Link>
+         </li> </a>
         </div>
         </div>
         <div className="main_home_img z-30">

@@ -50,7 +50,17 @@ module.exports = {
   				'4': 'hsl(var(--chart-4))',
   				'5': 'hsl(var(--chart-5))'
   			}
-  		}
+  		},
+		  animation: {
+			'spin-slow': 'spin 1s linear infinite',
+			'spin-reverse-slow': 'spin-reverse 1s linear infinite',
+		},
+		keyframes: {
+			'spin-reverse': {
+			  '0%': { transform: 'rotate(0deg)' },
+			  '100%': { transform: 'rotate(-360deg)' },
+			},
+		},
   	}
   },
   plugins: [require("tailwindcss-animate")],

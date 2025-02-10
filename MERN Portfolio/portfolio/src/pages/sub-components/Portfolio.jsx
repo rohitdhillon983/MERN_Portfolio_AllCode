@@ -176,6 +176,12 @@ export const Portfolio = () => {
       <div className=" w-10/12 mx-auto">{
         projects.map((elem)=>{
           // console.log(elem)
+          let tech = elem.technologies
+          const aa =  tech.split(",")
+
+          let dis = elem.description
+          const disc = dis.slice(0,200)
+          // console.log(disc)
           return(
             <div>
               {elem.projectNo%2 == 0 ? 
@@ -185,8 +191,10 @@ export const Portfolio = () => {
                       <div className="shadow-[0_0_20px_#999] relative p-5 pt-8 rounded-3xl z-10 transition-all hover:scale-90">
                         <span className="bg-gradient-to-t from-purple-500 to-pink-500 text-white shadow-xl shadow-[#666] p-2 px-4 rounded-full absolute right-[-60px] top-[35%] ProjectEvenNo">{elem.projectNo}</span>
                         <h1 className="text-2xl fontStyle2">{elem.title}</h1>
-                        <p className="text-[#999] m-3">{elem.description}</p>
-                        <p className="px-3">{elem.technologies}</p>
+                        <p className="text-[#999] m-3">{disc}...</p>
+                        <p className="px-3 flex flex-wrap gap-3">{aa.map(element => {
+                          return <p className="text-black border-2 px-2 rounded-3xl shadow-lg">{element}</p>
+                        })}</p>
 
                         <div className="flex gap-6 px-3 mt-3">
                           <Link to={elem.gitRepoLink}>
@@ -206,22 +214,23 @@ export const Portfolio = () => {
                     </div>
                     <div className="relative flex justify-center items-center w-[50%] border-l-4 ProjectContent2">
                       <Link to={`/project/${elem._id}`}>
-                      <div className="w-[70%] max-[425px]:w-full max-[425px]:my-8 flex justify-center items-center IBefore">
-                        <img className="h-full" src={elem.projectImg.url} alt="" />
+                      <div className="max-[425px]:w-full max-[425px]:my-8 flex justify-center px-4 items-center IBefore">
+                        <img className="h-full rounded-lg overflow-hidden" src={elem.projectImg.url} alt="" />
                       </div>
                       </Link>                   
                     </div>
                   </div>
-                </div>:
-              
+                </div>:          
                   <div>
                     <div className="flex justify-center flex-row-reverse projectContainer projectContainer2 overflow-hidden">
                     <div className="relative cbefore w-[50%] p-9 flex justify-center items-center ProjectContent2_1">
                       <div className="shadow-[0_0_20px_#999] relative p-5 pt-8 rounded-3xl z-10 transition-all hover:scale-90">
                         <span className="bg-gradient-to-t from-purple-500 to-pink-500 text-white shadow-xl shadow-[#666] p-2 px-4 rounded-full absolute left-[-60px] top-[35%] PorjectOddNo">{elem.projectNo}</span>
                         <h1 className="text-2xl fontStyle2">{elem.title}</h1>
-                        <p className="text-[#999] m-3">{elem.description}</p>
-                        <p className="px-3">{elem.technologies}</p>
+                        <p className="text-[#999] m-3">{disc}...</p>
+                        <p className="px-3 flex flex-wrap gap-3">{aa.map(element => {
+                          return <p className="text-black border-2 px-2 rounded-3xl shadow-lg">{element}</p>
+                        })}</p>
 
                         <div className="flex gap-6 px-3 mt-3">
                           <Link to={elem.gitRepoLink}>
@@ -239,12 +248,12 @@ export const Portfolio = () => {
                         <p>{elem.deployed}</p> */}
                       </div>
                     </div>
-                    <div className="relative flex justify-center items-center w-[50.4%] border-r-4 ProjectContent2_2">
-                      <Link to={`/project/${elem._id}`}>
-                      <div className="w-[70%] max-[425px]:w-full max-[425px]:my-8 flex justify-center items-center IBefore">
-                        <img className="h-full" src={elem.projectImg.url} alt="" />
-                      </div> 
-                      </Link>                  
+                    <div className="relative flex justify-center items-center w-[50.4%] border-r-4 ProjectContent2_2 ">
+                        <Link to={`/project/${elem._id}`}>
+                          <div className=" max-[425px]:w-full max-[425px]:my-8 flex justify-center items-center rounded-lg overflow-hidden px-4 IBefore">
+                            <img className="h-full rounded-xl overflow-hidden" src={elem.projectImg.url} alt="" />
+                          </div> 
+                      </Link>                 
                     </div>
                   </div>
                   </div>}

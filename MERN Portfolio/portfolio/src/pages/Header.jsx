@@ -22,7 +22,7 @@ export const Header=()=>{
               <Link to={"https://mern-portfolio-admin.netlify.app/"}>
               <div className="flex justify-center items-center gap-2 w-28 transition-all hover:border-[#fb2f2f] border-b-[3px] border-[#ff323200] font-bold text-[#777676] text-[1.5rem]">
                 <MdLogin />   
-                 Login
+                 Dashboard
               </div>
               </Link>
            </div>

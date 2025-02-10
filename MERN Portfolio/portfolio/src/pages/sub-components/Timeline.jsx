@@ -5,23 +5,31 @@ import img from "../../assets/Education.png"
 import { useGSAP } from "@gsap/react";
 import gsap from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Loading from "./Loader";
 gsap.registerPlugin(ScrollTrigger);
 
 export const Timeline = () => {
   const [timeline, setTimeline] = useState([]);
+  const [loader,setLoader]=useState(true)
+
+  const getMyTimeline = async () => {
+    try {
+    const { data } = await axios.get(
+      "https://mern-portfolio-backend-3.onrender.com/api/v1/timeline/getall",
+      { withCredentials: true }
+      
+    );
+    setTimeline(data.allTimeLine);
+    setLoader(false)
+    // setLoader(false)
+  }
+ catch (error) {
+ console.log(error) 
+}
+  };
   useEffect(() => {
-    const getMyTimeline = async () => {
-      const { data } = await axios.get(
-        "https://mern-portfolio-backend-3.onrender.com/api/v1/timeline/getall",
-        { withCredentials: true }
-        
-      );
-    //   console.log(data)
-      setTimeline(data.allTimeLine);
-    };
     getMyTimeline();
   }, []);
-
 
   const gsaps=()=>{
     useGSAP(()=>{
@@ -92,23 +100,27 @@ export const Timeline = () => {
   return (
     <div className="relative w-full my-16 z-10 bord py-[120px]">
   <div className=" relative w-full flex flex-col gap-9 Timeline_Tit">
-
     <div className="absolute w-[60%] h-[160%] TimelineBgBox z-20 left-10 rotate-12 bg-[#e3def67b] borderRadius "></div>
     <div className="absolute w-[40%] h-[120%] TimelineBgBox right-[120px] rotate-45 bg-[#dfbfd67b] borderRadius -z-10 "></div>
 
     <h1 className="fontStyle2 absolute right-20 -top-28 text-5xl text-[#120d44] Timeline_Title">Timeline</h1>
-    
-      <div className="flex  w-10/12 mx-auto z-100">
-        <div className="w-[50%] z-20 TimelineContentImg">
+      {loader ?(<div>
+        <Loading/>
+      </div>):(
+        <div className="flex  w-10/12 mx-auto z-100">
+        {/* left side */}
+        <div className="w-[50%] z-20 TimelineContentImg max-[425px]:hidden">
           <img className="w-[500px]" src={img} alt="" />
         </div>
+
+        {/* right side */}
         <div className="bg-[#ececec6e] px-9 border-b-4 pt-5 overflow-y-hidden TimelineContent">
           <ol className="relative border-s border-gray-500 dark:border-gray-700">
             {timeline &&
               timeline.map((element) => {
                 // console.log(timeline)
                 return (
-                  <li className="mb-10 ms-6 overflow-x-hidden " key={element._id}>
+                  <li className="mb-10 ms-6  " key={element._id}>
                     <span className="absolute -left-7 mt-3 flex items-center justify-center p-2 bg-blue-100 border-[8px] border-[#fcfcfc] shadow-[0_0_10px_#999] rounded-full ">
                       <FaGraduationCap className="text-2xl"/>
                     </span>
@@ -119,7 +131,7 @@ export const Timeline = () => {
                         <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
                           {element.timeline.from} - {element.timeline.to ? element.timeline.to : "Present"}
                         </time>
-                        <p className="text-base font-normal text-gray-500 dark:text-gray-400">
+                        <p className="text-base font-normal text-gray-500 dark:text-gray-400 ">
                           {element.description}
                         </p>
                     </div>
@@ -128,9 +140,11 @@ export const Timeline = () => {
               })}
           </ol>
         </div>
-      </div>
+      </div>)}
+      
     </div>
   </div>
   );
 };
+
 
